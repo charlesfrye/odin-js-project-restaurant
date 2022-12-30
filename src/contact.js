@@ -1,9 +1,13 @@
 import { erase, swapActiveTo } from "./util";
 
-const content = document.getElementById("content");
-const selfNav = document.getElementById("contact");
+function setup() {
+  const selfNav = document.getElementById("contact");
+  selfNav.addEventListener("click", () => makePage());
+}
 
 function makePage() {
+  const content = document.getElementById("content");
+  const selfNav = document.getElementById("contact");
   erase();
   makeHeader(content);
   makeContactInfo(content);
@@ -23,4 +27,4 @@ function makeContactInfo(node) {
   content.appendChild(p);
 }
 
-export { makePage, selfNav };
+export { setup };

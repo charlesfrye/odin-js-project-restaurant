@@ -1,10 +1,15 @@
 import { erase, swapActiveTo } from "./util";
 import Restaurant from "./img/restaurant.png";
 
-const content = document.getElementById("content");
-const selfNav = document.getElementById("home");
+function setup() {
+  const selfNav = document.getElementById("home");
+  selfNav.addEventListener("click", () => makePage());
+  makePage();
+}
 
 function makePage() {
+  const content = document.getElementById("content");
+  const selfNav = document.getElementById("home");
   erase();
   makeHeader(content);
   makeImage(content);
@@ -33,4 +38,4 @@ function makeMarketingCopy(node) {
   content.appendChild(p);
 }
 
-export { makePage, selfNav };
+export { setup };

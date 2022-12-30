@@ -1,10 +1,14 @@
 import { erase, swapActiveTo } from "./util";
 import Restaurant from "./img/restaurant.png";
 
-const content = document.getElementById("content");
-const selfNav = document.getElementById("menu");
+function setup() {
+  const selfNav = document.getElementById("menu");
+  selfNav.addEventListener("click", () => makePage());
+}
 
 function makePage() {
+  const content = document.getElementById("content");
+  const selfNav = document.getElementById("menu");
   erase();
   makeHeader(content);
   makeMenu(content);
@@ -31,4 +35,4 @@ function makeMenu(node) {
   }
 }
 
-export { makePage, selfNav };
+export { setup };

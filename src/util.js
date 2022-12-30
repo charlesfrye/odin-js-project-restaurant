@@ -1,7 +1,7 @@
-const content = document.getElementById("content");
 const allNavs = document.getElementsByClassName("nav");
 
 function erase() {
+  const content = document.getElementById("content");
   while (content.firstChild) {
     content.firstChild.remove();
   }
