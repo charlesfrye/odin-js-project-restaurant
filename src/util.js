@@ -1,5 +1,3 @@
-const allNavs = document.getElementsByClassName("nav");
-
 function erase() {
   const content = document.getElementById("content");
   while (content.firstChild) {
@@ -8,6 +6,8 @@ function erase() {
 }
 
 function swapActiveTo(targetNav) {
+  const allNavs = document.getElementsByClassName("nav");
+
   for (const nav of allNavs) {
     nav.classList.remove("active");
     nav.classList.add("inactive");
