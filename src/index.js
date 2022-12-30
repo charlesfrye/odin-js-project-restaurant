@@ -1,4 +1,3 @@
-import { erase } from "./util";
 import "./style.css";
 import * as home from "./home";
 import * as menu from "./menu";
